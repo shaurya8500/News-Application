@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Website By Shaurya</title>
+
+    <!-- Link CSS  -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Link Favicon  -->
+    <link rel="shortcut icon" href="./asset/favicon.png">
+
+  </head>
+  <body>
+    <!-- NavBar  -->
+    <nav>
+      <div class="mainNav container flex">
+        <a href="#" class="companyLogo">
+          <img src="./asset/logo2.png" alt="Copany Logo" />
+        </a>
+        <div class="navLinks" id="navLinks">
+          <ul class="flex">
+            <li
+              class="hoverLink navItem"
+              id="sports"
+              onclick="onNavItemClick('sports')"
+            >
+              Sports
+            </li>
+            <li
+              class="hoverLink navItem"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              Finance
+            </li>
+            <li
+              class="hoverLink navItem"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              Politics
+            </li>
+            <li
+              class="hoverLink navItem"
+              id="business"
+              onclick="onNavItemClick('business')"
+            >
+              Business
+            </li>
+          </ul>
+          <div class="mobileSearchBar">
+            <input
+              type="text"
+              class="newsInput"
+              id="newsInputt"
+              placeholder="e.g. Science"
+            />
+          </div>
+        </div>
+        <div class="searchBar">
+          <input
+            type="text"
+            class="newsInput"
+            id="newsInput"
+            placeholder="e.g. Science"
+          />
+          <button class="searchBtn" id="searchBtn">Search</button>
+          <i class="fa fa-search" id="mobileSearch" aria-hidden="true"></i>
+        </div>
+        <div class="toggle">
+          <i class="fa-solid fa-bars" id="toggleBtn"></i>
+          <i class="fa-solid fa-x" id="closeBtn"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main  -->
+    <main>
+      <div class="cardsContainer container flex" id="cardsContainer"></div>
+    </main>
+
+    <!-- Not Found -->
+    <div class="errorContainer subContainer" id="notFound">
+      <img src="./asset/notFound.png" />
+    </div>
+
+    <!-- Templates of Card -->
+    <template id="templateNewsCard">
+      <div class="card">
+        <div class="cardHeader">
+          <img src="https://via.placeholder.com/400x200" alt="" id="newsImg" />
+        </div>
+        <div class="cardContent">
+          <h3 class="newsTitle" id="newsTitle">This is the Title</h3>
+          <h6 class="newsSource" id="newsSource">End Gadget 26/08/2023</h6>
+          <p class="newsDescription" id="newsDescription">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+            tempora quia repellat recusandae ipsam labore accusamus, veniam eius
+            aut cum?
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <script src="./script.js"></script>
+    <!-- Font Awesome Script  -->
+    <script
+      src="https://kit.fontawesome.com/8b871ad912.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
